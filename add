@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BASENAME=$(echo -n "$1" | sed 's%^.*/\([^/]*\)\.git$%\1%g')
+
+git submodule add "$1" "$HOME/.vim/pack/plugins/start/$BASENAME"
