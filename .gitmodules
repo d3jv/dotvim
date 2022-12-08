@@ -22,6 +22,6 @@
 [submodule "pack/plugins/start/supertab"]
 	path = pack/plugins/start/supertab
 	url = git@github.com:ervandew/supertab.git
-[submodule "/home/dave/.vim/pack/plugins/start/vim-autoclose"]
-	path = /home/dave/.vim/pack/plugins/start/vim-autoclose
+[submodule "pack/plugins/start/vim-autoclose"]
+	path = pack/plugins/start/vim-autoclose
 	url = git@github.com:Townk/vim-autoclose.git
