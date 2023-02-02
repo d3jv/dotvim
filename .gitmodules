@@ -25,3 +25,6 @@
 [submodule "pack/plugins/start/vim-autoclose"]
 	path = pack/plugins/start/vim-autoclose
 	url = git@github.com:Townk/vim-autoclose.git
+[submodule "/home/xstorek/.vim/pack/plugins/start/ale"]
+	path = /home/xstorek/.vim/pack/plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git
