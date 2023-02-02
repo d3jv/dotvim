@@ -1,30 +1,40 @@
 [submodule "pack/plugins/start/vim-commentary"]
 	path = pack/plugins/start/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
+	shallow = true
 [submodule "pack/plugins/start/vim-eunuch"]
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
+	shallow = true
 [submodule "pack/plugins/start/limelight.vim"]
 	path = pack/plugins/start/limelight.vim
 	url = git@github.com:junegunn/limelight.vim.git
+	shallow = true
 [submodule "pack/plugins/start/vim-sensible"]
 	path = pack/plugins/start/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
+	shallow = true
 [submodule "pack/plugins/start/vim-sleuth"]
 	path = pack/plugins/start/vim-sleuth
 	url = git@github.com:tpope/vim-sleuth.git
+	shallow = true
 [submodule "pack/plugins/start/vim-sneak"]
 	path = pack/plugins/start/vim-sneak
 	url = git@github.com:justinmk/vim-sneak.git
+	shallow = true
 [submodule "pack/plugins/start/vim-surround"]
 	path = pack/plugins/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+	shallow = true
 [submodule "pack/plugins/start/supertab"]
 	path = pack/plugins/start/supertab
 	url = git@github.com:ervandew/supertab.git
+	shallow = true
 [submodule "pack/plugins/start/vim-autoclose"]
 	path = pack/plugins/start/vim-autoclose
 	url = git@github.com:Townk/vim-autoclose.git
+	shallow = true
 [submodule "/home/xstorek/.vim/pack/plugins/start/ale"]
 	path = /home/xstorek/.vim/pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
+	shallow = true
