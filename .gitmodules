@@ -38,3 +38,11 @@
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
 	shallow = true
+[submodule "pack/plugins/start/vim-airline"]
+	path = pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+	shallow = true
+[submodule "pack/plugins/start/vim-code-dark"]
+	path = pack/plugins/start/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark.git
+	shallow = true
