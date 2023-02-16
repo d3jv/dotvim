@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 <git-repo>"
+    exit
+fi
+
 BASENAME=$(echo -n "$1" | sed 's%^.*/\([^/]*\)\.git$%\1%g')
 PTH="pack/plugins/start/$BASENAME" 
 
