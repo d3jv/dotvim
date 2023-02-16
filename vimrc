@@ -16,7 +16,6 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 set linebreak		" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
 set showmatch		" Highlight matching brace
 set showcmd	    	" Show last command on right
 set cursorline 		" Highlight current line
