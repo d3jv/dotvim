@@ -34,6 +34,8 @@ set wrap 		" Wrap lines
 set ruler			" Show row and column ruler information
 set undolevels=1000		" Number of undo levels
 
+set foldmethod=manual
+
 """""
 """"" Key mapping
 """""
