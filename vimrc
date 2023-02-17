@@ -106,6 +106,6 @@ endfun
 " Call AsciidoctorMappings for all `*.adoc` and `*.asciidoc` files
 augroup asciidoctor
     au!
-    au BufEnter *.adoc,*.asciidoc call AsciidoctorMappings()
+    au BufEnter *ad,*.adoc,*.asciidoc call AsciidoctorMappings()
 augroup END
 
