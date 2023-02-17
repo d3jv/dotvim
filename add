@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $# -ne 1 ]]; then
-    echo "Usage: $0 <git-repo>"
+    echo "Usage: $0 <git-repo-clone-url>"
     exit
 fi
 
