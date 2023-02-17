@@ -63,3 +63,47 @@ let g:ale_c_clang_executable = 'gcc'
 let g:ale_c_clang_options = '-std=c99 -Wall -Wextra -pedantic'
 let g:ale_c_clangtidy_executable = 'clang-tidy'
 let g:ale_c_clangtidy_options = '-std=c99 -Wall -Wextra -pedantic'
+
+"""""
+""""" AsciiDoctor settings copypasted from the plugin repo
+"""""
+" HTML
+let g:asciidoctor_executable = 'asciidoctor'
+let g:asciidoctor_extensions = ['asciidoctor-diagram', 'asciidoctor-rouge']
+let g:asciidoctor_css_path = '~/docs/AsciiDocThemes'
+let g:asciidoctor_css = 'haba-asciidoctor.css'
+
+" PDF
+let g:asciidoctor_pdf_executable = 'asciidoctor-pdf'
+let g:asciidoctor_pdf_extensions = ['asciidoctor-diagram']
+let g:asciidoctor_pdf_themes_path = '~/docs/AsciiDocThemes'
+let g:asciidoctor_pdf_fonts_path = '~/docs/AsciiDocThemes/fonts'
+
+" folding
+let g:asciidoctor_folding = 1
+let g:asciidoctor_fold_options = 1
+
+" syntax highlighting for languages in [source] blocks
+let g:asciidoctor_fenced_languages = ['python', 'c'] " TODO: add more
+
+" Function to create buffer local mappings and add default compiler
+fun! AsciidoctorMappings()
+    " TODO: figure out if this conflicts with existing mappings
+    nnoremap <buffer> <leader>oo :AsciidoctorOpenRAW<CR>
+    nnoremap <buffer> <leader>op :AsciidoctorOpenPDF<CR>
+    nnoremap <buffer> <leader>oh :AsciidoctorOpenHTML<CR>
+    nnoremap <buffer> <leader>ox :AsciidoctorOpenDOCX<CR>
+    nnoremap <buffer> <leader>ch :Asciidoctor2HTML<CR>
+    nnoremap <buffer> <leader>cp :Asciidoctor2PDF<CR>
+    nnoremap <buffer> <leader>cx :Asciidoctor2DOCX<CR>
+    nnoremap <buffer> <leader>p :AsciidoctorPasteImage<CR>
+    " :make will build pdfs
+    compiler asciidoctor2pdf
+endfun
+
+" Call AsciidoctorMappings for all `*.adoc` and `*.asciidoc` files
+augroup asciidoctor
+    au!
+    au BufEnter *.adoc,*.asciidoc call AsciidoctorMappings()
+augroup END
+
