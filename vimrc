@@ -52,7 +52,9 @@ inoremap <C-k> <ESC>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" Linting for c99
+"""""
+""""" Linting for c99
+"""""
 let g:ale_completion_enabled = 1
 let g:ale_linters = {'c': ['gcc', 'clangtidy', 'clang-format']}
 let g:ale_c_gcc_executable = 'gcc'
