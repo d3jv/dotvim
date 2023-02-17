@@ -54,8 +54,7 @@
 	path = pack/plugins/start/open-browser.vim
 	url = https://github.com/tyru/open-browser.vim.git
 	shallow = true
-[submodule "pack/plugins/start/https:/github.com/weirongxu/plantuml-previewer.vim"]
-	path = pack/plugins/start/https:/github.com/weirongxu/plantuml-previewer.vim
-	url = https://github.com/weirongxu/plantuml-previewer.vim
-[submodule "pack/plugins/start/https://github.com/weirongxu/plantuml-previewer.vim"]
+[submodule "pack/plugins/start/plantuml-previewer.vim"]
+	path = pack/plugins/start/plantuml-previewer.vim
+	url = https://github.com/weirongxu/plantuml-previewer.vim.git
 	shallow = true
