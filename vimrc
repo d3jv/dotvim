@@ -71,15 +71,15 @@ let g:ale_c_clangtidy_options = '-std=c99 -Wall -Wextra -pedantic'
 """""
 " HTML
 let g:asciidoctor_executable = 'asciidoctor'
-let g:asciidoctor_extensions = ['asciidoctor-diagram', 'asciidoctor-rouge']
-let g:asciidoctor_css_path = '~/docs/AsciiDocThemes'
-let g:asciidoctor_css = 'haba-asciidoctor.css'
+"let g:asciidoctor_extensions = ['asciidoctor-diagram', 'asciidoctor-rouge']
+"let g:asciidoctor_css_path = '~/docs/AsciiDocThemes'
+"let g:asciidoctor_css = 'haba-asciidoctor.css'
 
 " PDF
 let g:asciidoctor_pdf_executable = 'asciidoctor-pdf'
-let g:asciidoctor_pdf_extensions = ['asciidoctor-diagram']
-let g:asciidoctor_pdf_themes_path = '~/docs/AsciiDocThemes'
-let g:asciidoctor_pdf_fonts_path = '~/docs/AsciiDocThemes/fonts'
+"let g:asciidoctor_pdf_extensions = ['asciidoctor-diagram']
+"let g:asciidoctor_pdf_themes_path = '~/docs/AsciiDocThemes'
+"let g:asciidoctor_pdf_fonts_path = '~/docs/AsciiDocThemes/fonts'
 
 " folding
 let g:asciidoctor_folding = 1
