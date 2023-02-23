@@ -6,3 +6,4 @@ if [[ $# -ne 1 ]]; then
 fi
 
 git rm "$1" && rm -rf .git/modules/"$1" && git config --remove-section submodule."$1"
+rm -rf "$1"
