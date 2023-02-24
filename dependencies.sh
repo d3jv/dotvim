@@ -37,12 +37,12 @@ esac
 asciidoc_install() {
     gem -v >/dev/null 2>/dev/null || sudo apt-get install ruby
     sudo apt-get install asciidoctor ruby-asciidoctor-pdf
-    gem install asciidoctor-diagram asciidoctor-rouge
+    sudo gem install asciidoctor-diagram asciidoctor-rouge
 }
 
 asciidoc_remove() {
     sudo apt-get remove asciidoctor ruby-asciidoctor-pdf
-    gem remove asciidoctor-diagram asciidoctor-rouge
+    sudo gem remove asciidoctor-diagram asciidoctor-rouge
     echo "Don't forget to remove asciidoc settings from vimrc."
 }
 
