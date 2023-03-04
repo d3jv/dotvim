@@ -11,7 +11,7 @@ fi
 
 if [ "$1" = "help" ]; then
     echo $USAGE
-    echo "Supported packages: asciidoc"
+    echo "Supported packages: asciidoc, plantuml"
     exit 0
 fi
 
@@ -33,7 +33,6 @@ case $OPTION in
         ;;
 esac
 
-# Asciidoc 
 asciidoc_install() {
     gem -v >/dev/null 2>/dev/null || sudo apt-get install ruby
     sudo apt-get install asciidoctor ruby-asciidoctor-pdf
@@ -46,9 +45,20 @@ asciidoc_remove() {
     echo "Don't forget to remove asciidoc settings from vimrc."
 }
 
+plantuml_install() {
+    sudo apt install graphviz
+}
+
+plantuml_remove() {
+    sudo apt remove graphviz
+}
+
 case $NAME in
     asciidoc)
         asciidoc_$ARG
+        ;;
+    plantuml)
+        plantuml_$ARG
         ;;
     *)
         echo "Package $NAME isn't supported by this script."
