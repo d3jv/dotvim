@@ -50,3 +50,7 @@
 	path = pack/plugins/start/vim-asciidoctor
 	url = https://github.com/habamax/vim-asciidoctor.git
 	shallow = true
+[submodule "pack/plugins/start/typescript-vim"]
+	path = pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+	shallow = true
