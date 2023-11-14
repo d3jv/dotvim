@@ -60,19 +60,6 @@ map <leader>tm :tabmove
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
-" Toggle CRLF
-let s:_toggle = 0
-function! s:toggleCRLF() abort
-    if s:_toggle
-        inoremap <C-m> <CR>
-    else
-        inoremap <C-m> <C-V><CR><CR>
-    endif
-    let s:_toggle = s:_toggle ? 0 : 1
-endfunction
-
-command! ToggleCRLF :call s:toggleCRLF()
-
 """""
 """"" Linting for c99
 """""
