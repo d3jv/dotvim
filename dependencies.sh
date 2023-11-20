@@ -53,12 +53,27 @@ plantuml_remove() {
     sudo apt remove graphviz
 }
 
+# TODO: actually instal it properly
+fff_install() {
+    echo "cd /usr/local/src"
+    echo "git clone https://github.com/dylanaraps/fff.git"
+    echo "cd fff"
+    echo "make PREFIX=/usr/local/sbin install && mv /usr/local/sbin/bin/fff /usr/local/sbin && rmdir /usr/local/sbin/bin"
+}
+
+fff_remove() {
+    echo "cd /usr/local/src/fff && make uninstall"
+}
+
 case $NAME in
     asciidoc)
         asciidoc_$ARG
         ;;
     plantuml)
         plantuml_$ARG
+        ;;
+    fff)
+        fff_$ARG
         ;;
     *)
         echo "Package $NAME isn't supported by this script."
