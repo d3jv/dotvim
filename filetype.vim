@@ -3,4 +3,5 @@ if exists("did_load_filetypes")
 endif
 augroup filetypedetect
   au! BufRead,BufNewFile *.ad		setfiletype asciidoctor
+  au! BufRead,BufNewFile *.tsx,*.jsx	setfiletype typescriptreact
 augroup END
