@@ -88,7 +88,7 @@ let g:asciidoctor_folding = 1
 let g:asciidoctor_fold_options = 1
 
 " syntax highlighting for languages in [source] blocks
-let g:asciidoctor_fenced_languages = ['python', 'c'] " TODO: add more
+let g:asciidoctor_fenced_languages = ['python', 'c', 'cs'] " TODO: add more
 
 " Function to create buffer local mappings and add default compiler
 fun! Asciidoctor()
