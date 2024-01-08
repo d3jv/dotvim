@@ -62,10 +62,6 @@
 	path = pack/plugins/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
 	shallow = true
-[submodule "pack/plugins/start/fff.vim"]
-	path = pack/plugins/start/fff.vim
-	url = https://github.com/dylanaraps/fff.vim.git
-	shallow = true
 [submodule "pack/plugins/start/vim-jsx-typescript"]
 	path = pack/plugins/start/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
