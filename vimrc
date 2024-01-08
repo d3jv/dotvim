@@ -92,7 +92,7 @@ let g:asciidoctor_fenced_languages = ['python', 'c', 'cs'] " TODO: add more
 
 " Function to create buffer local mappings and add default compiler
 fun! Asciidoctor()
-    compiler asciidoctor2html
+    compiler asciidoctor2pdf
 endfun
 
 " Call AsciidoctorMappings for all `*.adoc` and `*.asciidoc` files
