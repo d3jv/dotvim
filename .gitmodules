@@ -66,7 +66,7 @@
 	path = pack/plugins/start/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
 	shallow = true
-[submodule "/home/dave/.vim/pack/plugins/start/nerdtree"]
-	path = /home/dave/.vim/pack/plugins/start/nerdtree
+[submodule "pack/plugins/start/nerdtree"]
+	path = pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 	shallow = true
