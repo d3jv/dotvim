@@ -1,0 +1,10 @@
+= Dependencies
+
+== Asciidoctor
+
+- ruby, asciidoctor, ruby-asciidoctor-pdf
+- gems: asciidoctor-diagram, asciidoctor-rouge
+
+== Plantuml
+- graphviz
+
