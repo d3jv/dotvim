@@ -2,8 +2,8 @@
 
 == Asciidoctor
 
-- ruby, asciidoctor, ruby-asciidoctor-pdf
-- gems: asciidoctor-diagram, asciidoctor-rouge
+- packages: ruby, (ruby-)asciidoctor
+- gems: asciidoctor-pdf, asciidoctor-diagram, asciidoctor-rouge
 
 == Plantuml
 - graphviz
