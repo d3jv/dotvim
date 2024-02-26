@@ -70,14 +70,6 @@
 	path = pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 	shallow = true
-[submodule "pack/plugins/start/vim-lsp"]
-	path = pack/plugins/start/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp.git
-	shallow = true
-[submodule "pack/plugins/start/vim-lsp-settings"]
-	path = pack/plugins/start/vim-lsp-settings
-	url = https://github.com/mattn/vim-lsp-settings.git
-	shallow = true
 [submodule "pack/plugins/start/asyncomplete.vim"]
 	path = pack/plugins/start/asyncomplete.vim
 	url = https://github.com/prabirshrestha/asyncomplete.vim.git
@@ -85,8 +77,4 @@
 [submodule "pack/plugins/start/asyncomplete-ale.vim"]
 	path = pack/plugins/start/asyncomplete-ale.vim
 	url = https://github.com/andreypopp/asyncomplete-ale.vim.git
-	shallow = true
-[submodule "pack/plugins/start/asyncomplete-lsp.vim"]
-	path = pack/plugins/start/asyncomplete-lsp.vim
-	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
 	shallow = true
