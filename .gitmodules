@@ -78,3 +78,7 @@
 	path = pack/plugins/start/asyncomplete-ale.vim
 	url = https://github.com/andreypopp/asyncomplete-ale.vim.git
 	shallow = true
+[submodule "pack/plugins/start/omnisharp-vim"]
+	path = pack/plugins/start/omnisharp-vim
+	url = https://github.com/OmniSharp/omnisharp-vim.git
+	shallow = true
