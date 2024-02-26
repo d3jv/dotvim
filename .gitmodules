@@ -70,3 +70,7 @@
 	path = pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 	shallow = true
+[submodule "pack/plugins/start/vim-lsp"]
+	path = pack/plugins/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+	shallow = true
