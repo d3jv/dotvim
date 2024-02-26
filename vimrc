@@ -64,7 +64,10 @@ map <leader>to :tabonly<cr>
 """"" Linting for c99
 """""
 let g:ale_completion_enabled = 1
-let g:ale_linters = {'c': ['gcc', 'clangtidy', 'clang-format']}
+let g:ale_linters = {
+\ 'c': ['gcc', 'clangtidy', 'clang-format'],
+\ 'cs': ['OmniSharp']
+\}
 let g:ale_c_gcc_executable = 'gcc'
 let g:ale_c_gcc_options = '-std=c99 -Wall -Wextra -pedantic'
 let g:ale_c_clang_executable = 'gcc'
