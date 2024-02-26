@@ -8,3 +8,5 @@
 == Plantuml
 - graphviz
 
+== fzf.vim
+- fzf

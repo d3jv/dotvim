@@ -86,3 +86,7 @@
 	path = pack/plugins/start/vim-sharpenup
 	url = https://github.com/nickspoons/vim-sharpenup.git
 	shallow = true
+[submodule "pack/plugins/start/fzf.vim"]
+	path = pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+	shallow = true
