@@ -82,3 +82,7 @@
 	path = pack/plugins/start/asyncomplete.vim
 	url = https://github.com/prabirshrestha/asyncomplete.vim.git
 	shallow = true
+[submodule "pack/plugins/start/asyncomplete-ale.vim"]
+	path = pack/plugins/start/asyncomplete-ale.vim
+	url = https://github.com/andreypopp/asyncomplete-ale.vim.git
+	shallow = true
