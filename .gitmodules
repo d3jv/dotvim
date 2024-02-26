@@ -82,3 +82,7 @@
 	path = pack/plugins/start/omnisharp-vim
 	url = https://github.com/OmniSharp/omnisharp-vim.git
 	shallow = true
+[submodule "pack/plugins/start/vim-sharpenup"]
+	path = pack/plugins/start/vim-sharpenup
+	url = https://github.com/nickspoons/vim-sharpenup.git
+	shallow = true
