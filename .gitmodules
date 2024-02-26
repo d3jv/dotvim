@@ -90,3 +90,7 @@
 	path = pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
 	shallow = true
+[submodule "pack/plugins/start/gruvbox"]
+	path = pack/plugins/start/gruvbox
+	url = https://github.com/gruvbox-community/gruvbox.git
+	shallow = true

@@ -7,8 +7,8 @@ inoremap <S-Tab> <C-V><Tab>
 set nocompatible
 set encoding=utf-8
 
-colorscheme codedark
-let g:airline_theme = 'codedark'
+colorscheme gruvbox
+let g:airline_theme = 'gruvbox'
 
 " Color 81. character in line to visualize long lines
 highlight ColorColumn ctermbg=magenta
