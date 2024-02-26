@@ -90,3 +90,7 @@
 	path = pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
 	shallow = true
+[submodule "pack/plugins/start/lightline-ale"]
+	path = pack/plugins/start/lightline-ale
+	url = https://github.com/maximbaz/lightline-ale.git
+	shallow = true
