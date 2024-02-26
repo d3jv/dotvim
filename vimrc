@@ -7,11 +7,12 @@ inoremap <S-Tab> <C-V><Tab>
 set nocompatible
 set encoding=utf-8
 
-colorscheme gruvbox
-
 " Color 81. character in line to visualize long lines
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
+
+set completeopt=menuone,noinsert,noselect,popuphidden
+set completepopup=highlight:Pmenu,border:off
 
 set linebreak		" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
@@ -60,9 +61,40 @@ map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
 """""
-""""" Linting for c99
+""""" Colours
 """""
-let g:ale_completion_enabled = 1
+augroup ColorschemePreferences
+  autocmd!
+  " These preferences clear some gruvbox background colours, allowing transparency
+  autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight Todo       ctermbg=NONE guibg=NONE
+  " Link ALE sign highlights to similar equivalents without background colours
+  autocmd ColorScheme * highlight link ALEErrorSign   WarningMsg
+  autocmd ColorScheme * highlight link ALEWarningSign ModeMsg
+  autocmd ColorScheme * highlight link ALEInfoSign    Identifier
+augroup END
+
+" Use truecolor in the terminal, when it is supported
+if has('termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+colorscheme gruvbox
+
+" Most of the following settings up to asciidoctor are from
+" here: https://github.com/OmniSharp/omnisharp-vim/wiki/Example-config
+
+"""""
+""""" ALE
+"""""
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
+let g:ale_sign_info = '·'
+let g:ale_sign_style_error = '·'
+let g:ale_sign_style_warning = '·'
+
 let g:ale_linters = {
 \ 'c': ['gcc', 'clangtidy', 'clang-format'],
 \ 'cs': ['OmniSharp']
@@ -73,6 +105,93 @@ let g:ale_c_clang_executable = 'gcc'
 let g:ale_c_clang_options = '-std=c99 -Wall -Wextra -pedantic'
 let g:ale_c_clangtidy_executable = 'clang-tidy'
 let g:ale_c_clangtidy_options = '-std=c99 -Wall -Wextra -pedantic'
+
+"""""
+""""" Asyncomplete
+"""""
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 0
+
+"""""
+""""" Sharpenup
+"""""
+let g:OmniSharp_server_path = '/usr/local/lib/OmniSharp/OmniSharp'
+
+" All sharpenup mappings will begin with `<Space>os`, e.g. `<Space>osgd` for
+" :OmniSharpGotoDefinition
+let g:sharpenup_map_prefix = '<Space>os'
+
+let g:sharpenup_statusline_opts = { 'Text': '%s (%p/%P)' }
+let g:sharpenup_statusline_opts.Highlight = 0
+
+augroup OmniSharpIntegrations
+  autocmd!
+  autocmd User OmniSharpProjectUpdated,OmniSharpReady call lightline#update()
+augroup END
+
+"""""
+""""" Lightline
+"""""
+let g:lightline = {
+\ 'colorscheme': 'gruvbox',
+\ 'active': {
+\   'right': [
+\     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok'],
+\     ['lineinfo'], ['percent'],
+\     ['fileformat', 'fileencoding', 'filetype', 'sharpenup']
+\   ]
+\ },
+\ 'inactive': {
+\   'right': [['lineinfo'], ['percent'], ['sharpenup']]
+\ },
+\ 'component': {
+\   'sharpenup': sharpenup#statusline#Build()
+\ },
+\ 'component_expand': {
+\   'linter_checking': 'lightline#ale#checking',
+\   'linter_infos': 'lightline#ale#infos',
+\   'linter_warnings': 'lightline#ale#warnings',
+\   'linter_errors': 'lightline#ale#errors',
+\   'linter_ok': 'lightline#ale#ok'
+  \  },
+  \ 'component_type': {
+  \   'linter_checking': 'right',
+  \   'linter_infos': 'right',
+  \   'linter_warnings': 'warning',
+  \   'linter_errors': 'error',
+  \   'linter_ok': 'right'
+\  }
+\}
+
+" Use unicode chars for ale indicators in the statusline
+let g:lightline#ale#indicator_checking = "\uf110 "
+let g:lightline#ale#indicator_infos = "\uf129 "
+let g:lightline#ale#indicator_warnings = "\uf071 "
+let g:lightline#ale#indicator_errors = "\uf05e "
+let g:lightline#ale#indicator_ok = "\uf00c "
+
+"""""
+""""" OmniSharp
+"""""
+let g:OmniSharp_popup_position = 'peek'
+let g:OmniSharp_popup_options = {
+\ 'highlight': 'Normal',
+\ 'padding': [0],
+\ 'border': [1],
+\ 'borderchars': ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],
+\ 'borderhighlight': ['ModeMsg']
+\}
+
+let g:OmniSharp_popup_mappings = {
+\ 'sigNext': '<C-n>',
+\ 'sigPrev': '<C-p>',
+\ 'pageDown': ['<C-f>', '<PageDown>'],
+\ 'pageUp': ['<C-b>', '<PageUp>']
+\}
+
+let g:OmniSharp_highlight_groups = {
+\ 'ExcludedCode': 'NonText'
+\}
 
 """""
 """"" AsciiDoctor settings copypasted from the plugin repo
