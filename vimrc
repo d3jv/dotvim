@@ -1,6 +1,7 @@
 set autoindent expandtab tabstop=4 shiftwidth=4
 set number
 set backspace=indent,eol,start
+filetype indent plugin on
 syntax on
 inoremap <S-Tab> <C-V><Tab>
 
@@ -63,18 +64,6 @@ map <leader>to :tabonly<cr>
 """""
 """"" Colours
 """""
-augroup ColorschemePreferences
-  autocmd!
-  " These preferences clear some gruvbox background colours, allowing transparency
-  autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight Todo       ctermbg=NONE guibg=NONE
-  " Link ALE sign highlights to similar equivalents without background colours
-  autocmd ColorScheme * highlight link ALEErrorSign   WarningMsg
-  autocmd ColorScheme * highlight link ALEWarningSign ModeMsg
-  autocmd ColorScheme * highlight link ALEInfoSign    Identifier
-augroup END
-
 " Use truecolor in the terminal, when it is supported
 if has('termguicolors')
   set termguicolors
@@ -132,6 +121,9 @@ augroup END
 """""
 """"" Lightline
 """""
+set laststatus=2	"Makes the line work
+set noshowmode		"Don't show the mode since it's already in line
+
 let g:lightline = {
 \ 'colorscheme': 'gruvbox',
 \ 'active': {
