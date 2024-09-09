@@ -107,7 +107,7 @@ let g:asyncomplete_auto_completeopt = 0
 """""
 """"" Sharpenup
 """""
-let g:OmniSharp_server_path = '/usr/local/lib/OmniSharp/OmniSharp'
+let g:OmniSharp_server_use_net6 = 1
 
 " All sharpenup mappings will begin with `<Space>os`, e.g. `<Space>osgd` for
 " :OmniSharpGotoDefinition
