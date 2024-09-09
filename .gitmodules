@@ -102,3 +102,7 @@
 	path = pack/plugins/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
 	shallow = true
+[submodule "pack/plugins/start/vim-css-color"]
+	path = pack/plugins/start/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
+	shallow = true
