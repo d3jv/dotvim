@@ -61,6 +61,9 @@ map <leader>tm :tabmove
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
+" Replace selected text in the whole file
+vnoremap <C-r> "hy:%s!<C-r>h!!g<left><left>
+
 """""
 """"" Colours
 """""
