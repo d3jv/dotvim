@@ -67,6 +67,9 @@ map <leader>to :tabonly<cr>
 " Replace selected text in the whole file
 vnoremap <C-r> "hy:%s!<C-r>h!!g<left><left>
 
+" Omnisharp code actions
+map <leader>. :OmniSharpGetCodeActions<cr>
+
 """""
 """"" Colours
 """""
