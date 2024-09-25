@@ -18,10 +18,6 @@
 	path = pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	shallow = true
-[submodule "pack/plugins/start/vim-autoclose"]
-	path = pack/plugins/start/vim-autoclose
-	url = https://github.com/Townk/vim-autoclose.git
-	shallow = true
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
