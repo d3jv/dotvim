@@ -93,10 +93,18 @@ let g:ale_sign_info = '·'
 let g:ale_sign_style_error = '·'
 let g:ale_sign_style_warning = '·'
 
+let g:ale_detail_to_floating_preview = 1
+
 let g:ale_linters = {
 \ 'c': ['gcc', 'clangtidy', 'clang-format'],
-\ 'cs': ['OmniSharp']
+\ 'cs': ['OmniSharp'],
+\ 'rust': ['analyzer']
 \}
+
+let g:ale_fixers = {
+\ 'rust': ['rustfmt', 'trim_whitespace']
+\}
+
 let g:ale_c_gcc_executable = 'gcc'
 let g:ale_c_gcc_options = '-std=c99 -Wall -Wextra -pedantic'
 let g:ale_c_clang_executable = 'gcc'
