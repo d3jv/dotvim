@@ -37,6 +37,9 @@ set undolevels=1000		" Number of undo levels
 
 set foldmethod=manual
 
+set updatetime=300
+set signcolumn=yes
+
 """""
 """"" Key mapping
 """""
