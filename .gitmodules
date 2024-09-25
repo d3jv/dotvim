@@ -106,3 +106,7 @@
 	path = pack/plugins/start/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
 	shallow = true
+[submodule "pack/plugins/start/rust.vim"]
+	path = pack/plugins/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+	shallow = true
