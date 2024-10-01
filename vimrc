@@ -40,6 +40,8 @@ set foldmethod=manual
 set updatetime=300
 set signcolumn=yes
 
+packloadall | silent! helptags ALL
+
 """""
 """"" Key mapping
 """""
