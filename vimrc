@@ -204,14 +204,11 @@ let g:lightline = {
 \   'right': [
 \     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok'],
 \     ['lineinfo'], ['percent'],
-\     ['fileformat', 'fileencoding', 'filetype', 'sharpenup']
+\     ['fileformat', 'fileencoding', 'filetype']
 \   ]
 \ },
 \ 'inactive': {
-\   'right': [['lineinfo'], ['percent'], ['sharpenup']]
-\ },
-\ 'component': {
-\   'sharpenup': sharpenup#statusline#Build()
+\   'right': [['lineinfo'], ['percent']]
 \ },
 \ 'component_expand': {
 \   'linter_checking': 'lightline#ale#checking',
