@@ -97,22 +97,25 @@ let g:ale_sign_style_warning = '·'
 
 " Use COC for LSP and completion
 let g:ale_completion_enabled = 0
-let g:ale_disable_lsp = 1
+" let g:ale_disable_lsp = 1
 
 " let g:ale_floating_preview = 1
 " let g:ale_hover_to_floating_preview = 1
 
 let g:ale_virtualtext_cursor = 'current'
 
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_insert_leave = 1
 let g:ale_linters = {
 \ 'c': ['gcc', 'clangtidy', 'clang-format'],
 \ 'cs': ['OmniSharp'],
-\ 'rust': ['analyzer']
+\ 'rust': ['analyzer', 'cargo']
 \}
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\ 'rust': ['rustfmt', 'trim_whitespace']
+\ '*': ['trim_whitespace'],
+\ 'rust': ['rustfmt']
 \}
 
 let g:ale_c_gcc_executable = 'gcc'
