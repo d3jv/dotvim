@@ -66,14 +66,6 @@
 	path = pack/plugins/start/asyncomplete-ale.vim
 	url = https://github.com/andreypopp/asyncomplete-ale.vim.git
 	shallow = true
-[submodule "pack/plugins/start/omnisharp-vim"]
-	path = pack/plugins/start/omnisharp-vim
-	url = https://github.com/OmniSharp/omnisharp-vim.git
-	shallow = true
-[submodule "pack/plugins/start/vim-sharpenup"]
-	path = pack/plugins/start/vim-sharpenup
-	url = https://github.com/nickspoons/vim-sharpenup.git
-	shallow = true
 [submodule "pack/plugins/start/fzf.vim"]
 	path = pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
