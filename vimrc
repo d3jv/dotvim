@@ -69,9 +69,6 @@ map <leader>to :tabonly<cr>
 " Replace selected text in the whole file
 vnoremap <C-r> "hy:%s!<C-r>h!!g<left><left>
 
-" Omnisharp code actions
-map <leader>. :OmniSharpGetCodeActions<cr>
-
 """""
 """"" Colours
 """""
@@ -108,7 +105,6 @@ let g:ale_lint_on_save = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_linters = {
 \ 'c': ['gcc', 'clangtidy', 'clang-format'],
-\ 'cs': ['OmniSharp'],
 \ 'rust': ['analyzer', 'cargo']
 \}
 
@@ -197,23 +193,6 @@ let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
 
 """""
-""""" Sharpenup
-"""""
-let g:OmniSharp_server_use_net6 = 1
-
-" All sharpenup mappings will begin with `<Space>os`, e.g. `<Space>osgd` for
-" :OmniSharpGotoDefinition
-let g:sharpenup_map_prefix = '<Space>os'
-
-let g:sharpenup_statusline_opts = { 'Text': '%s (%p/%P)' }
-let g:sharpenup_statusline_opts.Highlight = 0
-
-augroup OmniSharpIntegrations
-  autocmd!
-  autocmd User OmniSharpProjectUpdated,OmniSharpReady call lightline#update()
-augroup END
-
-"""""
 """"" Lightline
 """""
 set laststatus=2	"Makes the line work
@@ -256,29 +235,6 @@ let g:lightline#ale#indicator_infos = "\uf129 "
 let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c "
-
-"""""
-""""" OmniSharp
-"""""
-let g:OmniSharp_popup_position = 'peek'
-let g:OmniSharp_popup_options = {
-\ 'highlight': 'Normal',
-\ 'padding': [0],
-\ 'border': [1],
-\ 'borderchars': ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],
-\ 'borderhighlight': ['ModeMsg']
-\}
-
-let g:OmniSharp_popup_mappings = {
-\ 'sigNext': '<C-n>',
-\ 'sigPrev': '<C-p>',
-\ 'pageDown': ['<C-f>', '<PageDown>'],
-\ 'pageUp': ['<C-b>', '<PageUp>']
-\}
-
-let g:OmniSharp_highlight_groups = {
-\ 'ExcludedCode': 'NonText'
-\}
 
 """""
 """"" AsciiDoctor settings copypasted from the plugin repo
