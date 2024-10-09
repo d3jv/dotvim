@@ -1,3 +1,4 @@
 {
-    "diagnostic.displayByAle": true
+    "diagnostic.displayByAle": true,
+    "rust-analyzer.checkOnSave.command": "clippy"
 }
