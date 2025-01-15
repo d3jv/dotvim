@@ -1,4 +1,7 @@
 {
     "diagnostic.displayByAle": true,
-    "rust-analyzer.checkOnSave.command": "clippy"
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "never",
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
 }
