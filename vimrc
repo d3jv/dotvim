@@ -69,9 +69,6 @@ map <leader>to :tabonly<cr>
 " Replace selected text in the whole file
 vnoremap <C-r> "hy:%s!<C-r>h!!g<left><left>
 
-" Omnisharp code actions
-map <leader>. :OmniSharpGetCodeActions<cr>
-
 """""
 """"" Colours
 """""
@@ -190,6 +187,22 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Trigger code action for the current cursor position
 nmap <leader>a  <Plug>(coc-codeaction-cursor)
 
+" Override coc bindings with omnisharp.vim in .cs files
+augroup omnisharp_commands
+  autocmd!
+
+  autocmd FileType cs nmap <silent> gd <Plug>(omnisharp_go_to_definition)
+  autocmd FileType cs nmap <silent> gy <Plug>(omnisharp_go_to_type_definition)
+  autocmd FileType cs nmap <silent> gi <Plug>(omnisharp_find_implementations)
+  autocmd FileType cs nmap <silent> gr <Plug>(omnisharp_find_usages)
+  autocmd FileType cs nmap <silent> K  <Plug>(omnisharp_documentation)
+  autocmd FileType cs xmap <silent> <leader>f <Plug>(omnisharp_code_format)
+  autocmd FileType cs nmap <silent> <leader>f <Plug>(omnisharp_code_format)
+  autocmd FileType cs nmap <silent> <leader>a <Plug>(omnisharp_code_actions)
+  autocmd FileType cs nmap <silent> <leader>rn <Plug>(omnisharp_rename)
+
+augroup END
+
 """""
 """"" Asyncomplete
 """""
@@ -200,10 +213,6 @@ let g:asyncomplete_auto_completeopt = 0
 """"" Sharpenup
 """""
 let g:OmniSharp_server_use_net6 = 1
-
-" All sharpenup mappings will begin with `<Space>os`, e.g. `<Space>osgd` for
-" :OmniSharpGotoDefinition
-let g:sharpenup_map_prefix = '<Space>os'
 
 let g:sharpenup_statusline_opts = { 'Text': '%s (%p/%P)' }
 let g:sharpenup_statusline_opts.Highlight = 0
