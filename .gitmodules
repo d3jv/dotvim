@@ -2,10 +2,6 @@
 	path = pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 	shallow = true
-[submodule "pack/plugins/start/limelight.vim"]
-	path = pack/plugins/start/limelight.vim
-	url = https://github.com/junegunn/limelight.vim.git
-	shallow = true
 [submodule "pack/plugins/start/vim-sleuth"]
 	path = pack/plugins/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
