@@ -106,3 +106,7 @@
 	path = pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	shallow = true
+[submodule "pack/plugins/start/vimtex"]
+	path = pack/plugins/start/vimtex
+	url = https://github.com/lervag/vimtex.git
+	shallow = true
